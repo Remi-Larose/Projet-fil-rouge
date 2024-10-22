@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+
+html{
+  background-color: #041821;
+}
+
+header{
+  justify-content: space space-between;
+  margin: 0;
+  color: white;
+
+}
+
+
+
+#texte{
+  color: white;
+  font-family: "Yeseva One", serif; /* Police utilisée pour les sections */
+  width: 500px; 
+
+}
+#texte2{
+  color: #1bd79e;
+  width: 500px; 
+  font-family: "Yeseva One", serif; /* Police utilisée pour les sections */
+
+}
+  
+small{
+  color: #808080;
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+div{
+  color: white;
+}
+
+
+footer{
+  text-align: center;
+  color: #808080;
+
+}
+
+@media (min-width: 1025px) {
+  .grid-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+      width: 80vw; /* Largeur de 80% de la vue */
+      margin: auto; /* Centrage */
+  }
+
+  .grid-parent {
+      padding-top: 30px; /* Padding supérieur */
+      margin: 40px auto; /* Marges en haut et en bas */
+  }
+
+  .grid-item {
+      max-width: 200px; /* Largeur maximale */
+      height: 200px; /* Hauteur fixe */
+  }
+
+  .grid-item img {
+      max-width: 200px; /* Largeur maximale des images */
+      height: 200px; /* Hauteur fixe des images */
+  }
+}
+
+/* Grille avec 5 colonnes sur tablette */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .grid-container {
+      grid-template-columns: repeat(5, 1fr); /* 5 colonnes */
+  }
+
+  .grid-parent {
+      padding-top: 30px; /* Padding supérieur */
+      margin: 40px auto; /* Marges en haut et en bas */
+  }
+
+  .grid-item img {
+      max-width: 140px; /* Largeur maximale des images */
+      height: 140px; /* Hauteur fixe des images */
+  }
+
+  .grid-item {
+      max-width: 140px; /* Largeur maximale */
+      height: 140px; /* Hauteur fixe */
+  }
+}
+
+/* Grille avec 3 colonnes sur mobile */
+@media (max-width: 640px) {
+  .grid-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  }
+
+  .grid-parent {
+      padding-top: 30px; /* Padding supérieur */
+      margin: 40px auto; /* Marges en haut et en bas */
+  }
+
+  .grid-item img {
+      max-width: 140px; /* Largeur maximale des images */
+      height: 140px; /* Hauteur fixe des images */
+  }
+
+  .grid-item {
+      max-width: 140px; /* Largeur maximale */
+      height: 140px; /* Hauteur fixe */
+  }
+
+  .container {
+      display: block; /* Changer l'affichage à bloc */
+  }
+
+  #div1 {
+      width: 100%; /* Largeur de 100% */
+      text-align: center; /* Centre le texte */
+      margin: 0%; /* Pas de marge */
+  }
+
+  #div2 {
+      width: 100%; /* Largeur de 100% */
+      text-align: center; /* Centre le texte */
+      margin: 0%; /* Pas de marge */
+      padding: 0%; /* Pas de padding */
+  }
+
+  .grid-container img:nth-child(n + 10) {
+      display: none; /* Masquer les images au-delà de la 9ème */
+  }
+}
