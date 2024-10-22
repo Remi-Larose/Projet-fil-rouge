@@ -9,20 +9,29 @@ header{
   justify-content: space space-between;
   margin: 0;
   color: white;
-
+  display: block;
+}
+aside
+{
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    justify-content: space-between;
+    width: 100px;
 }
 
-
+body{
+  padding: 0;
+  margin: 0;
+}
 
 #texte{
   color: white;
   font-family: "Yeseva One", serif; /* Police utilisée pour les sections */
-  width: 500px; 
 
 }
-#texte2{
+span{
   color: #1bd79e;
-  width: 500px; 
   font-family: "Yeseva One", serif; /* Police utilisée pour les sections */
 
 }
@@ -35,11 +44,28 @@ small{
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  font-family: "monstrrat", serif;
+  background-color: #40c781;
+  border-radius: 3px; /* Coins arrondis */
+  border-bottom: 2px solid #35a76e; /* Petite bordure en bas du bouton */
+  text-align: center; /* Centrer le texte */
 }
+
+.container a{
+  text-decoration: none; /* Supprimer le soulignage du lien */
+  line-height: 20px; /* Changer la hauteur de la ligne d'écriture */
+  color: #fff; /* Couleur du texte blanche */
+}
+
+.container:hover {
+  background-color: #34a46c; /* On modifie la couleur du fond au passage de la souris */
+
+  }
 
 div{
   color: white;
+  font-family: "monstrrat", serif;
 }
 
 
@@ -49,90 +75,40 @@ footer{
 
 }
 
-@media (min-width: 1025px) {
-  .grid-container {
-      grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
-      width: 80vw; /* Largeur de 80% de la vue */
-      margin: auto; /* Centrage */
+/*responsive tablette*/
+@media screen and (min-width:768px) and (max-width:1024px){  
+.gallery{
+      display: grid;
+      grid-template-columns:repeat(5,1fr);/*On crée 5 colonnes (donc 5 images)*/
+      grid-template-rows: repeat(3,1fr);
+      gap: 0.6em;
+      justify-items: center;
+      
   }
-
-  .grid-parent {
-      padding-top: 30px; /* Padding supérieur */
-      margin: 40px auto; /* Marges en haut et en bas */
-  }
-
-  .grid-item {
-      max-width: 200px; /* Largeur maximale */
-      height: 200px; /* Hauteur fixe */
-  }
-
-  .grid-item img {
-      max-width: 200px; /* Largeur maximale des images */
-      height: 200px; /* Hauteur fixe des images */
-  }
+.gallery img:nth-child(n +15) {/*on affiche que 9 images, les autres sont cachées au delà*/
+        display: none;
+   }
 }
+/*responsive mobile*/
+@media screen and (max-width:767px) {
+.gallery{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);/*on crée 3 colonnes */
+      grid-template-rows: repeat(3,1fr);
+      gap:0.6em;
+      justify-items:center;
+    
 
-/* Grille avec 5 colonnes sur tablette */
-@media (min-width: 640px) and (max-width: 1024px) {
-  .grid-container {
-      grid-template-columns: repeat(5, 1fr); /* 5 colonnes */
   }
+  
 
-  .grid-parent {
-      padding-top: 30px; /* Padding supérieur */
-      margin: 40px auto; /* Marges en haut et en bas */
-  }
+  .description{
+      font-size: 1.2em;
+      margin-left: 0.7em;
 
-  .grid-item img {
-      max-width: 140px; /* Largeur maximale des images */
-      height: 140px; /* Hauteur fixe des images */
   }
-
-  .grid-item {
-      max-width: 140px; /* Largeur maximale */
-      height: 140px; /* Hauteur fixe */
+  .galery img:nth-child(n + 9) {/*on affiche que 9 photos*/
+        display: none; 
   }
-}
-
-/* Grille avec 3 colonnes sur mobile */
-@media (max-width: 640px) {
-  .grid-container {
-      grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-  }
-
-  .grid-parent {
-      padding-top: 30px; /* Padding supérieur */
-      margin: 40px auto; /* Marges en haut et en bas */
-  }
-
-  .grid-item img {
-      max-width: 140px; /* Largeur maximale des images */
-      height: 140px; /* Hauteur fixe des images */
-  }
-
-  .grid-item {
-      max-width: 140px; /* Largeur maximale */
-      height: 140px; /* Hauteur fixe */
-  }
-
-  .container {
-      display: block; /* Changer l'affichage à bloc */
-  }
-
-  #div1 {
-      width: 100%; /* Largeur de 100% */
-      text-align: center; /* Centre le texte */
-      margin: 0%; /* Pas de marge */
-  }
-
-  #div2 {
-      width: 100%; /* Largeur de 100% */
-      text-align: center; /* Centre le texte */
-      margin: 0%; /* Pas de marge */
-      padding: 0%; /* Pas de padding */
-  }
-
-  .grid-container img:nth-child(n + 10) {
-      display: none; /* Masquer les images au-delà de la 9ème */
-  }
+  
 }
