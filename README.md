@@ -13,4 +13,4 @@ Le projet était de refaire une page web qui ce rapprochais le plus de la page w
 
 
 
-Liens du projet ### https://github.com/Remi-Larose/Projet-fil-rouge
+Liens du projet : https://github.com/Remi-Larose/Projet-fil-rouge
