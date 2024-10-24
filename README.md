@@ -10,3 +10,7 @@ Le projet était de refaire une page web qui ce rapprochais le plus de la page w
 2. On a utilisé un kit Font Awesome
 
 3. Les polices utilisées sur la maquette grâce à l'API Google Fonts.
+
+
+
+Liens du projet ### https://github.com/Remi-Larose/Projet-fil-rouge
